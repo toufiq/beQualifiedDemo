@@ -1,0 +1,25 @@
+{
+  "name": "saucedemo-playwright-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:standard": "playwright test tests/standard-user-regression.spec.ts",
+    "test:problem": "playwright test tests/problem-user-regression.spec.ts",
+    "test:error": "playwright test tests/error-user-regression.spec.ts",
+    "test:visual": "playwright test tests/visual-user-regression.spec.ts",
+    "test:performance": "playwright test tests/performance-glitch-user.spec.ts",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "allure-commandline": "^2.23.0",
+    "allure-playwright": "^2.0.0",
+    "typescript": "^5.8.0"
+  }
+}
